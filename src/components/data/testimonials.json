@@ -1,0 +1,24 @@
+[
+  {
+    "rating": 5,
+    "feedback": "Excellent work! The project was delivered on time and exceeded our expectations.",
+    "name": "John Doe",
+    "title": "Project Manager",
+    "location": "New York, USA"
+  },
+  {
+    "rating": 5,
+    "feedback": "Professional, reliable, and highly skilled developer. Would definitely work with again.",
+    "name": "Jane Smith",
+    "title": "CEO",
+    "location": "London, UK"
+  },
+  {
+    "rating": 5,
+    "feedback": "Great attention to detail and excellent communication throughout the project.",
+    "name": "Mike Johnson",
+    "title": "Tech Lead",
+    "location": "San Francisco, USA"
+  }
+]
+

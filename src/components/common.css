@@ -1,0 +1,221 @@
+/* Reset & common styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0d1117;
+  color: #e6edf3;
+  scroll-behavior: smooth;
+}
+
+.page-content {
+  padding-top: 80px; /* reduced from 120px */
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 16px; /* reduced from 24px */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: calc(100% - 2rem);
+  max-width: 960px;
+  background: rgba(13, 17, 23, 0.75);
+  border: 1px solid rgba(88, 166, 255, 0.15);
+  border-radius: 999px;
+  padding: 1.75rem 1.2rem; /* reduced padding */
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 35px rgba(11, 15, 25, 0.35);
+  transition: background 0.3s ease, box-shadow 0.3s ease, border 0.3s ease, transform 0.3s ease;
+}
+
+.navbar.navbar--scrolled {
+  background: rgba(13, 17, 23, 0.92);
+  border-color: rgba(88, 166, 255, 0.35);
+  box-shadow: 0 20px 45px rgba(8, 11, 19, 0.55);
+  transform: translateX(-50%) translateY(-4px); /* smaller shift */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 0.25rem; /* reduced gap */
+  justify-content: center;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.nav-links li {
+  display: flex;
+}
+
+.nav-links li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.9rem; /* reduced padding */
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: #c9d1d9;
+  border-radius: 999px;
+  transition: all 0.25s ease;
+}
+
+.nav-links li a:hover {
+  color: #f0f6fc;
+  background-color: rgba(88, 166, 255, 0.16);
+}
+
+.nav-links li a.active {
+  color: #ffffff;
+  background: linear-gradient(135deg, #58a6ff, #2ea043);
+  box-shadow: 0 8px 16px rgba(88, 166, 255, 0.35);
+}
+
+.nav-links li a:focus-visible {
+  outline: 2px solid #58a6ff;
+  outline-offset: 3px;
+}
+
+/* Mobile hamburger toggle */
+.mobile-toggle {
+  display: none;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: #58a6ff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+  position: absolute;
+  left: 0;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+.mobile-toggle[aria-expanded="true"] .hamburger {
+  background-color: transparent;
+}
+
+.mobile-toggle[aria-expanded="true"] .hamburger::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.mobile-toggle[aria-expanded="true"] .hamburger::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/* Show hamburger on mobile */
+@media (max-width: 1024px) {
+  .mobile-toggle {
+    display: block;
+  }
+}
+
+/* Mobile nav */
+@media (max-width: 720px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(13, 17, 23, 0.95);
+    border-radius: 0 0 12px 12px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s ease, opacity 0.35s ease;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .nav-links.nav-links--open {
+    max-height: 1000px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links li a {
+    padding: 0.45rem 0.8rem; /* smaller padding */
+    font-size: 0.85rem;
+    text-align: center;
+  }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-links li a {
+    padding: 0.45rem 0.85rem;
+  }
+}
+
+/* Laptops / small desktops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    width: calc(100% - 2rem);
+    padding: 0.6rem 1.1rem;
+  }
+
+  .nav-links li a {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Large desktops / extra-large screens */
+@media (min-width: 1025px) {
+  .navbar {
+    width: calc(100% - 2rem);
+    padding: 0.75rem 1.2rem;
+  }
+
+  .nav-links li a {
+    padding: 0.35rem 0.9rem;
+    font-size: 1rem;
+  }
+}
