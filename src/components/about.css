@@ -1,0 +1,187 @@
+.about-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 1.5rem;
+  background: #0b1622;
+  color: #e6edf3;
+}
+
+.about-card {
+  max-width: 720px;
+  width: 100%;
+  background: rgba(13, 17, 23, 0.85);
+  border-radius: 24px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 25px 45px rgba(15, 23, 42, 0.35);
+  border: 1px solid rgba(88, 166, 255, 0.15);
+  text-align: center;
+}
+
+.about-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border: 3px solid rgba(88, 166, 255, 0.6);
+}
+
+.about-heading {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: #58a6ff;
+}
+
+.about-education {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #c9d1d9;
+}
+
+.about-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #8b949e;
+}
+
+.about-status {
+  font-size: 1.1rem;
+  color: #c9d1d9;
+}
+
+.about-status.error {
+  color: #ff7b72;
+}
+
+@media (max-width: 768px) {
+  .about-card {
+    padding: 2.25rem 1.75rem;
+  }
+
+  .about-heading {
+    font-size: 2rem;
+  }
+
+  .about-education {
+    font-size: 1rem;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile devices (small phones) */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 4rem 1rem;
+  }
+
+  .about-card {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .about-avatar {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .about-heading {
+    font-size: 1.8rem;
+  }
+
+  .about-education {
+    font-size: 0.95rem;
+  }
+
+  .about-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablets (portrait & small tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .about-section {
+    padding: 5rem 1.5rem;
+  }
+
+  .about-card {
+    padding: 2.25rem 1.75rem;
+  }
+
+  .about-avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .about-heading {
+    font-size: 2rem;
+  }
+
+  .about-education {
+    font-size: 1rem;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* Laptops / small desktops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .about-section {
+    padding: 5.5rem 2rem;
+  }
+
+  .about-card {
+    padding: 2.5rem 2rem;
+  }
+
+  .about-avatar {
+    width: 130px;
+    height: 130px;
+  }
+
+  .about-heading {
+    font-size: 2.3rem;
+  }
+
+  .about-education {
+    font-size: 1.05rem;
+  }
+
+  .about-text {
+    font-size: 0.98rem;
+  }
+}
+
+/* Large desktops / extra-large screens */
+@media (min-width: 1025px) {
+  .about-section {
+    padding: 6rem 1.5rem;
+  }
+
+  .about-card {
+    padding: 3rem 2.5rem;
+  }
+
+  .about-avatar {
+    width: 140px;
+    height: 140px;
+  }
+
+  .about-heading {
+    font-size: 2.5rem;
+  }
+
+  .about-education {
+    font-size: 1.1rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+}
